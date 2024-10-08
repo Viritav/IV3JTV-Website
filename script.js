@@ -36,7 +36,7 @@ function inIframe () {
 }
 
 if (!inIframe()) {
-	window.location = ('https://iv3jtv.altervista.org'+'?page='+window.location.pathname);
+	window.location = ('https://iv3jtv.mciacchi.it'+'?page='+window.location.pathname);
 }
 
 let lang = navigator.language.slice(0, 2);
