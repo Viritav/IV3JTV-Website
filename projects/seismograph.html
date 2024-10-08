@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../pagestyle.css">
+	</head>
+	<body>
+		<p class="path"><a href="../projects.html">Projects</a> / <a href="../projects/seismograph.html">Seismographic Sensor</a></p>
+		<p class="lang"><a id="ita">IT</a> | <a id="eng">EN</a></p>
+		<div class="it">
+			<p class="spacer"></p>
+			<h1>Sensore Sismografico</h1>
+			<div class="max inline"><h3>Benvenuti alla pagina dedicata al mio sensore sismografico, un progetto che unisce passione per l'elettronica e la sismologia. In questa guida, spiegher&ograve; come costruire e configurare un sismometro domestico utilizzando un sensore geofono e un microcontrollore Arduino. Se sei appassionato di rilevamento sismico o vuoi semplicemente esplorare un nuovo progetto, questa guida ti fornir&agrave; tutte le informazioni necessarie.</h3><img class="micro" src="../img/seismograph.webp"/></div>
+			<p class="spacer"></p>
+			<hr/>
+			<p class="spacer"></p>
+			<div class="max">
+				<h2>Componenti Principali del Sismometro</h2>
+				<div><h3>Il sismometro &egrave; composto da due parti principali:</h3></div>
+				<ul>
+					<li><h3>Sensore Geofono:</h3> Rileva le onde sismiche, come quelle causate da terremoti, e le converte in segnali elettrici. Questo sensore &egrave; estremamente sensibile e pu&ograve; rilevare movimenti minimi del suolo.</li>
+					<li><h3>Parte Elettronica:</h3> Comprende un modulo amplificatore basato sull'IC LM358, che amplifica il segnale fino a 10.000 volte. Successivamente, un microcontrollore Arduino elabora il segnale e lo trasmette al software Amaseis sul PC per la visualizzazione e la registrazione, il firmware necessario sull'Arduino &egrave; il seguente: <a href="../files/nerdaqII.zip" title="NerdaqII">Scarica NerdaqII</a>.</li>
+					<p class="spacer"></p>
+					<img class="small" src="../img/lm358_module_NvzU8hGmsH.avif"/>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Configurazione del Software Amaseis</h2>
+				<p>Per la gestione dei dati sismici, utilizzo il software Amaseis, un programma potente e versatile che consente di visualizzare e registrare i segnali sismici in tempo reale. Di seguito troverai una guida passo passo per configurare Amaseis e collegare il tuo sismometro al PC.</p>
+				<ol type="1">
+					<li><h3>Installazione di Amaseis:</h3> Scarica il software Amaseis dal seguente link: <a href="../files/AmaSeisSetup.exe" title="AmaSeis">Scarica AmaSeis</a>.</li>
+					<li><h3>Collegamento al Microcontrollore:</h3> Collega l'Arduino al PC tramite USB e seleziona la porta COM corretta nelle impostazioni di Amaseis.</li>
+					<br/>
+					<img class="small" src="../img/schematic_hSWZ1g2d3Z.jpg"/>
+					<li><h3>Configurazione del Dispositivo:</h3>
+						<ul>
+							<li><div class="max inline">Vai su<p class="italic">&nbsp;Settings&nbsp;</p>><p class="italic">&nbsp;Device&nbsp;</p>e seleziona<p class="bold">&nbsp;SETUPK1</p>.</div></li>
+							<li><div class="max inline">Imposta il livello zero a<p class="bold">&nbsp;32768</p>.</div></li>
+						</ul>
+					</li>
+					<li><h3>Regolazione dei Filtri e del Guadagno:</h3> Vai su Settings > Helicorder per regolare i filtri passa-basso e passa-alto e il guadagno, in base all'ampiezza del segnale.</li>
+					<li><h3>Creazione Automatica di Screenshot:</h3> Se desideri configurare Amaseis per creare automaticamente screenshot dei sismogrammi, consulta la seguente guida dettagliata: <a href="../files/Amaseis-and-Fling.pdf" title="Guida Screenshot Automatici">Guida Screenshot Automatici</a>.</li>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Funzionamento del Sismometro</h2>
+				<p>Una volta configurato, il tuo sismometro sar&agrave; in grado di rilevare terremoti e altri movimenti sismici. Pu&ograve; rilevare eventi sismici di grande entit&agrave; a livello globale, come terremoti di magnitudo superiore a 7 gradi della scala Richter. Inoltre, il sistema di registrazione e visualizzazione di Amaseis ti consente di analizzare i dati raccolti e rivedere eventi passati.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Considerazioni Finali</h2>
+				<p>Questo sismometro rappresenta un ottimo punto di partenza per chiunque voglia esplorare il rilevamento sismico senza dover investire in strumenti professionali costosi. Si tratta di un progetto adatto a chiunque, indipendentemente dal livello di esperienza in elettronica. Se segui questa guida, sarai in grado di costruire e configurare un sismometro funzionante per monitorare i movimenti sismici nella tua zona. Buona costruzione e buon divertimento!</p>
+			</div>
+		</div>
+		<div class="en">
+			<p class="spacer"></p>
+			<h1>Seismographic Sensor</h1>
+			<div class="max inline"><h3>Welcome to the page dedicated to my seismographic sensor, a project that combines a passion for electronics and seismology. In this guide, I will explain how to build and configure a home seismometer using a geophone sensor and an Arduino microcontroller. Whether you're passionate about seismic detection or just looking for a new project, this guide will provide you with all the necessary information.</h3><img class="micro" src="../img/seismograph.webp"/></div>
+			<p class="spacer"></p>
+			<hr/>
+			<p class="spacer"></p>
+			<div class="max">
+				<h2>Main Components of the Seismometer</h2>
+				<div><h3>The seismometer consists of two main parts:</h3></div>
+				<ul>
+					<li><h3>Geophone Sensor:</h3> Detects seismic waves, such as those caused by earthquakes, and converts them into electrical signals. This sensor is extremely sensitive and can detect minimal ground movements.</li>
+					<li><h3>Electronic Part:</h3> Includes an amplifier module based on the LM358 IC, which amplifies the signal up to 10,000 times. Then, an Arduino microcontroller processes the signal and transmits it to the Amaseis software on the PC for visualization and recording, the firmware needed for the Arduino is the following: <a href="../files/nerdaqII.zip" title="NerdaqII">Download NerdaqII</a>.</li>
+					<p class="spacer"></p>
+					<img class="small" src="../img/lm358_module_NvzU8hGmsH.avif"/>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Configuring the Amaseis Software</h2>
+				<p>For managing seismic data, I use the Amaseis software, a powerful and versatile program that allows you to visualize and record seismic signals in real time. Below is a step-by-step guide to configuring Amaseis and connecting your seismometer to your PC.</p>
+				<ol type="1">
+					<li><h3>Install Amaseis:</h3> Download the Amaseis software from the following link: <a href="../files/AmaSeisSetup.exe" title="AmaSeis">Download AmaSeis</a>.</li>
+					<li><h3>Connecting to the Microcontroller:</h3> Connect the Arduino to the PC via USB and select the correct COM port in the Amaseis settings.</li>
+					<br/>
+					<img class="small" src="../img/schematic_hSWZ1g2d3Z.jpg"/>
+					<li><h3>Device Configuration:</h3>
+						<ul>
+							<li><div class="max inline">Go to<p class="italic">&nbsp;Settings&nbsp;</p>><p class="italic">&nbsp;Device&nbsp;</p>and select<p class="bold">&nbsp;SETUPK1</p>.</div></li>
+							<li><div class="max inline">Set the zero level to<p class="bold">&nbsp;32768</p>.</div></li>
+						</ul>
+					</li>
+					<li><h3>Adjusting Filters and Gain:</h3> Go to Settings > Helicorder to adjust the low-pass and high-pass filters and the gain, according to the signal amplitude.</li>
+					<li><h3>Automatic Screenshot Creation:</h3> If you want to configure Amaseis to automatically create screenshots of the seismograms, refer to the following detailed guide: <a href="../files/Amaseis-and-Fling.pdf" title="Automatic Screenshot Guide">Automatic Screenshot Guide</a>.</li>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Seismometer Operation</h2>
+				<p>Once configured, your seismometer will be able to detect earthquakes and other seismic movements. It can detect significant seismic events globally, such as earthquakes with a magnitude greater than 7 on the Richter scale. Additionally, the Amaseis recording and visualization system allows you to analyze collected data and review past events.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Final Considerations</h2>
+				<p>This seismometer is an excellent starting point for anyone interested in seismic detection without investing in expensive professional tools. It is a project suitable for anyone, regardless of their experience level in electronics. By following this guide, you will be able to build and configure a working seismometer to monitor seismic movements in your area. Happy building and have fun!</p>
+		</div>
+		<img class="top" id="top" src="../img/arrow.svg"/>
+	</body>
+	<script src="../script.js"></script>
+</html>								

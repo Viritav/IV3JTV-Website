@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IV3JTV's web canteen!</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	</head>
+	<body>
+		<p class="copyright">&copy; Marco Ciacchi&nbsp;</p>
+		<div class="menu">
+			<div>
+			<p class="title">IV3JTV</p>
+			<p class="subtitle">Welcome into my web canteen!</p>
+			</div>
+			<p></p>
+			<p></p>
+			<div>
+			<p><a href="home.html" target="content" title="Go to the home page">&bull;&emsp;Home</a></p>
+			<p><a href="my-setup.html" target="content" title="See how my setup looks like">&bull;&emsp;My Setup</a></p>
+			</div>
+			<div>
+			<p><a href="projects.html" target="content" title="Explore all of my projects">&bull;&emsp;Projects</a></p>
+			<p><a href="about-me.html" target="content" title="Learn about me and who I am">&bull;&emsp;About Me</a></p>
+			</div>
+			<p></p>
+			<hr/>
+			<p></p>
+			<p><a href="https://www.qrz.com/db/iv3jtv" target="_blank" title="Visit my qrz.com page">&bull;&emsp;QRZ.com</a></p>
+			<p><a href="https://www.qsl.net/iv3jtv/" target="content" title="Visit my qsl.net page">&bull;&emsp;QSL.net</a></p>
+			<p><a href="https://www.aritrieste.it" target="content" title="Visit IQ3TS's website">&bull;&emsp;IQ3TS</a></p>
+		</div>
+		<iframe src="home.html" name="content" id="frame"></iframe>
+	</body>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.has("page")) {
+			document.getElementById("frame").src = urlParams.get("page");
+		}
+	</script>
+</html>

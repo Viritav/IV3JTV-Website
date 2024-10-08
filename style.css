@@ -1,0 +1,118 @@
+body {
+	background-image: url('img/prism.png');
+	color: white;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+}
+
+p {
+	font-family: sans-serif;
+}
+
+a {
+	font-family: sans-serif;
+	font-weight: bold;
+	color: white;
+	text-decoration-line: none;
+}
+
+a:hover {
+	text-shadow: 0 0 5px #ffffff;
+}
+
+hr {
+	height: 1px;
+	width: 70%;
+	box-shadow: 0 0 5px 0 rgba( 255, 255, 255, 1 );
+	background-color: white;
+}
+
+iframe {
+	border: none;
+	padding-left: 3.5em;
+	width: 80vw;
+}
+
+.menu {
+	padding-top: 5px;
+	height: 93vh;
+	width: 13vw;
+	min-width: 10em;
+	min-height: 35em;
+	background: rgba( 255, 255, 255, 0.03 );
+	box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
+	backdrop-filter: blur( 3px );
+	-webkit-backdrop-filter: blur( 3px );
+	border-radius: 10px;
+}
+
+.menu p {
+	font-weight: bold;
+	padding-left: 2em;
+	padding-top: 0.3em;
+	font-size: 1.1em;
+}
+
+.menu .title {
+	text-align: center;
+	margin: auto;
+	padding: 0;
+	padding-top: 1em;
+	font-size: 2.5em;
+}
+
+.menu .subtitle {
+	text-align: center;
+	margin: auto;
+	padding: 0;
+	width: 10em;
+	padding-top: 0.5em;
+	font-size: 1em;
+}
+
+.copyright {
+	font-size: 0.8em;
+	color: grey;
+	position: fixed;
+	margin: 0;
+	bottom: 0;
+	right: 0;
+}
+
+@media only screen and (max-device-width: 600px) {
+	body {
+		display: flex;
+		flex-wrap: wrap;
+    	justify-content: center;
+	}
+	hr {
+		height: 70%;
+    	width: 1px;
+		margin: 5%;
+	}
+	iframe {
+		padding-top: 3.5em;
+        width: 100vw;
+        height: 90vh;
+	}
+	.menu {
+    	height: 5vh;
+    	width: 98%;
+    	min-width: 2em;
+    	min-height: 10em;
+    	display: flex;
+    	align-items: center;
+		justify-content: center;
+	}
+	.menu p {
+		padding: 0;
+		padding-left: 1em;
+	}
+	.menu .title {
+		margin: auto;
+		padding: 0;
+		padding-top: 0;
+	}
+}

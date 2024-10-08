@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../pagestyle.css">
+	</head>
+	<body>
+		<p class="path"><a href="../projects.html">Projects</a> / <a href="../projects/noaa.html">NOAA Satellites images reception</a></p>
+		<p class="lang"><a id="ita">IT</a> | <a id="eng">EN</a></p>
+		<div class="it">
+			<p class="spacer"></p>
+			<h1>Ricezione di Immagini dai Satelliti NOAA</h1>
+			<div class="max inline"><h3>Benvenuti! Oggi sono entusiasta di condividere un progetto che combina la ricezione di immagini satellitari, un Raspberry Pi e alcuni componenti hardware a basso costo. Questo progetto permette di ricevere immagini direttamente dai satelliti NOAA (National Oceanic and Atmospheric Administration) utilizzando un Raspberry Pi e il software Raspberry-NOAA-v2.</h3><img class="micro" src="../img/NOAA-15.jpg"/></div>
+			<p class="spacer"></p>
+			<hr/>
+			<p class="spacer"></p>
+			<div class="max">
+				<h2>L'Attrezzatura</h2>
+				<div><h3>Per questo progetto, ho utilizzato i seguenti componenti:</h3></div>
+				<ul>
+					<li><h3>Raspberry Pi</h3> (ho usato un Raspberry Pi 4)</li><br/><img class="micro" src="../img/pi4.jpg"/>
+					<li><h3>Dongle RTL-SDR:</h3> Un ricevitore SDR versatile.</li><br/><img class="micro" src="../img/rtl-sdr.jpg"/>
+					<li><h3>Filtro FM Nooelec:</h3> Per ripulire i segnali dalle forti stazioni FM locali.</li><br/><img class="micro" src="../img/flamingo-fm.jpg"/>
+					<li><h3>Antenna V-Dipole:</h3> Un'antenna semplice ma efficace per ricevere i segnali dai satelliti NOAA.</li><br/><img class="micro" src="../img/IMG20240609133404.jpg"/>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Il Software: Raspberry-NOAA-v2</h2>
+				<p>Il software chiave di questo progetto &egrave; Raspberry-NOAA-v2. Si tratta di una significativa revisione del progetto originale Raspberry-NOAA, che consente di configurare facilmente una stazione a terra per ricevere e decodificare le immagini satellitari NOAA.</p>
+				<p>Raspberry-NOAA-v2 offre notevoli miglioramenti in termini di usabilit&agrave;, stile e funzionalit&agrave; generale. Funziona sia su Raspberry Pi che su normali sistemi a 64 bit basati su Debian, offrendo flessibilit&agrave; a seconda della configurazione. Il software include anche un pannello web che &egrave; compatibile con dispositivi mobili, rendendo facile monitorare e gestire le acquisizioni satellitari.</p>
+				<div class="max inline"><p>Puoi trovare il repository di Raspberry-NOAA-v2 qui: <a href="https://github.com/jekhokie/raspberry-noaa-v2"target="_blank" title="Raspberry-NOAA-v2 GitHub Repository">Repository Raspberry-NOAA-v2 su GitHub</a>.</p><img class="small" src="../img/noaa.png"/></div>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Guida Passo-Passo</h2>
+				<p>Ecco come ho configurato il sistema:</p>
+				<ol type="1">
+					<li><h3>Installa Raspberry Pi OS:</h3> Ho iniziato con la versione minima di Raspberry Pi OS (senza ambiente desktop) per mantenere basso l'uso della CPU e della memoria.</li>
+					<li><h3>Installa il Software:</h3> Dopo aver aggiornato il sistema e installato Git, ho clonato il repository Raspberry-NOAA-v2:
+					<br/>
+					&nbsp;
+					<div class="code">
+					<code>sudo apt update<br/>
+						  sudo apt full-upgrade -y<br/>
+						  sudo reboot<br/>
+						  sudo apt install git -y<br/>
+						  cd $HOME<br/>
+						  git clone --depth 1 https://github.com/jekhokie/raspberry-noaa-v2.git<br/>
+						  cd raspberry-noaa-v2/<br/>
+						  nano config/settings.yml<br/>
+						  ./install_and_upgrade.sh
+					</code>
+					</div>
+					</br>
+					Ho modificato il file "settings.yml" per adattarlo alla mia posizione e configurazione, come regolare il guadagno dell'antenna e selezionare le frequenze satellitari corrette.
+					</li>
+					<li><h3>Configurazione dell'Antenna:</h3> L'antenna V-Dipole &egrave; stata configurata per ricevere segnali dai satelliti NOAA. Il posizionamento e l'orientamento dell'antenna sono stati fondamentali per garantire una buona ricezione del segnale.</li>
+					<li><h3>Filtro FM:</h3> Ho aggiunto il filtro FM Nooelec tra il dongle RTL-SDR e l'antenna per eliminare le interferenze delle stazioni radio FM locali, che possono essere abbastanza forti da distorcere i segnali satellitari.</li>
+					<li><h3>Acquisizione e Decodifica:</h3> Una volta configurato il sistema, Raspberry-NOAA-v2 ha automaticamente catturato e decodificato i segnali satellitari NOAA durante ogni passaggio. Il software genera immagini dai segnali, che vengono poi visualizzate nel pannello web.</li>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Ricezione delle Immagini e Risultati</h2>
+				<p>Le immagini catturate dai satelliti NOAA offrono dati visivi sorprendenti dallo spazio, inclusi modelli meteorologici e condizioni superficiali. Il software Raspberry-NOAA-v2 supporta sia le immagini satellitari NOAA che Meteor-M 2, fornendo un'ampia gamma di dati satellitari da esplorare.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Perch&egrave; Scegliere Raspberry-NOAA-v2?</h2>
+				<p>Raspberry-NOAA-v2 &egrave; uno strumento fantastico per gli appassionati di radio che sono interessati ai dati satellitari. Semplifica il processo di configurazione di una stazione a terra e include un'interfaccia web facile da usare per gestire e visualizzare le acquisizioni. Il software &egrave; continuamente aggiornato, e la comunit&agrave; che lo circonda &egrave; attiva e di supporto.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Risoluzione dei Problemi e Miglioramenti</h2>
+				<p>Se riscontri problemi come immagini vuote o risultati strani, Raspberry-NOAA-v2 ha un sistema di log integrato per aiutarti nella risoluzione dei problemi. Inoltre, il software consente facili aggiornamenti e modifiche alla configurazione, rendendolo adattabile a diverse configurazioni.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Conclusione</h2>
+				<p>Impostare una stazione di ricezione delle immagini satellitari NOAA con un Raspberry Pi e componenti a basso costo &egrave; un progetto gratificante che porta la bellezza dei dati spaziali direttamente a casa tua. Che tu stia catturando modelli meteorologici o esplorando altri dati, questa configurazione offre un modo potente e accessibile per interagire con i segnali satellitari.</p>
+				<p>Se sei interessato a provare questo progetto, ti consiglio vivamente di immergerti nella comunit&agrave; di Raspberry-NOAA-v2 e di sperimentare con diverse configurazioni. Puoi trovare il software e tutti i dettagli nel <a href="https://github.com/jekhokie/raspberry-noaa-v2"target="_blank" title="Raspberry-NOAA-v2 GitHub Repository">Repository Raspberry-NOAA-v2 su GitHub</a>. Buona caccia ai satelliti!</p>
+			</div>
+		</div>
+		<div class="en">
+			<p class="spacer"></p>
+			<h1>NOAA Satellites Image Reception</h1>
+			<div class="max inline"><h3>Welcome! Today, I'm excited to share a project that brings together satellite image reception, a Raspberry Pi, and some affordable hardware components. This project involves receiving images directly from NOAA (National Oceanic and Atmospheric Administration) satellites using a Raspberry Pi and the Raspberry-NOAA-v2 software.</h3><img class="micro" src="../img/NOAA-15.jpg"/></div>
+			<p class="spacer"></p>
+			<hr/>
+			<p class="spacer"></p>
+			<div class="max">
+				<h2>The Setup</h2>
+				<div><h3>For this project, I used the following components:</h3></div>
+				<ul>
+					<li><h3>Raspberry Pi</h3> (I used a Raspberry Pi 4)</li><br/><img class="micro" src="../img/pi4.jpg"/>
+					<li><h3>RTL-SDR dongle:</h3> A versatile software-defined radio receiver.</li><br/><img class="micro" src="../img/rtl-sdr.jpg"/>
+					<li><h3>Nooelec FM Filter:</h3> To clean up the signals from strong local FM stations.</li><br/><img class="micro" src="../img/flamingo-fm.jpg"/>
+					<li><h3>V-Dipole Antenna:</h3> A simple yet effective antenna for receiving signals from NOAA satellites.</li><br/><img class="micro" src="../img/IMG20240609133404.jpg"/>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>The Software: Raspberry-NOAA-v2</h2>
+				<p>The key software in this project is Raspberry-NOAA-v2. This is a major refactor of the original Raspberry-NOAA project, which allows you to easily set up a ground station to receive and decode NOAA satellite images.</p>
+				<p>Raspberry-NOAA-v2 offers significant improvements in usability, style, and overall functionality. It runs on both Raspberry Pi and regular Debian-based 64-bit systems, providing flexibility depending on your setup. The software also includes a web panel that is mobile-friendly, making it easy to monitor and manage your satellite captures.</p>
+				<div class="max inline"><p>You can find the Raspberry-NOAA-v2 repository here: <a href="https://github.com/jekhokie/raspberry-noaa-v2"target="_blank" title="Raspberry-NOAA-v2 GitHub Repository">Raspberry-NOAA-v2 GitHub Repository</a>.</p><img class="small" src="../img/noaa.png"/></div>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Step-by-Step Guide</h2>
+				<p>Here's how I set up the system:</p>
+				<ol type="1">
+					<li><h3>Install the Raspberry Pi OS:</h3> I started with the minimal Raspberry Pi OS (without a desktop environment) to keep CPU and memory usage low.</li>
+					<li><h3>Install the Software:</h3> After updating the system and installing Git, I cloned the Raspberry-NOAA-v2 repository:
+					<br/>
+					&nbsp;
+					<div class="code">
+					<code>sudo apt update<br/>
+						  sudo apt full-upgrade -y<br/>
+						  sudo reboot<br/>
+						  sudo apt install git -y<br/>
+						  cd $HOME<br/>
+						  git clone --depth 1 https://github.com/jekhokie/raspberry-noaa-v2.git<br/>
+						  cd raspberry-noaa-v2/<br/>
+						  nano config/settings.yml<br/>
+						  ./install_and_upgrade.sh
+					</code>
+					</div>
+					</br>
+					I edited the "settings.yml" file to match my location and setup, such as adjusting the antenna gain and selecting the right satellite frequencies.
+					</li>
+					<li><h3>Antenna Setup:</h3> The V-Dipole antenna was configured to receive signals from NOAA satellites. Positioning and orientation of the antenna were key to ensuring strong signal reception.</li>
+					<li><h3>FM Filter:</h3> I added the Nooelec FM filter between the RTL-SDR dongle and the antenna to eliminate interference from local FM radio stations, which can be strong enough to distort the satellite signals.</li>
+					<li><h3>Capture and Decode:</h3> Once the system was set up, Raspberry-NOAA-v2 automatically captured and decoded the NOAA satellite signals during each pass. The software generates images from the signals, which are then displayed on the web panel.</li>
+				</ul>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Image Reception and Results</h2>
+				<p>The images captured from the NOAA satellites provide stunning visual data from space, including weather patterns and surface conditions. The Raspberry-NOAA-v2 software supports both NOAA and Meteor-M 2 satellite imagery capture, providing a broad range of satellite data to work with.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Why Raspberry-NOAA-v2?</h2>
+				<p>Raspberry-NOAA-v2 is a fantastic tool for amateur radio enthusiasts interested in satellite data. It simplifies the process of setting up a ground station and includes a user-friendly web interface for managing and viewing captures. The software is continuously updated, and the community around it is active and supportive.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Troubleshooting and Enhancements</h2>
+				<p>If you encounter issues like blank images or strange output, Raspberry-NOAA-v2 has a built-in log system to help you troubleshoot. Additionally, the software allows for easy upgrades and configuration changes, making it adaptable to different setups.</p>
+				<p class="spacer"></p>
+				<hr/>
+				<p class="spacer"></p>
+				<h2>Conclusion</h2>
+				<p>Setting up a NOAA satellite image reception station with a Raspberry Pi and affordable components is a rewarding project that brings the beauty of space data to your home. Whether you're capturing weather patterns or exploring other data, this setup offers a powerful and accessible way to engage with satellite signals.</p>
+				<p>If you're interested in trying this project, I highly recommend diving into the Raspberry-NOAA-v2 community and experimenting with different configurations. You can find the software and all the details in the <a href="https://github.com/jekhokie/raspberry-noaa-v2"target="_blank" title="Raspberry-NOAA-v2 GitHub Repository">Raspberry-NOAA-v2 GitHub Repository</a>. Happy satellite hunting!</p>
+			</div>
+		</div>
+		<img class="top" id="top" src="../img/arrow.svg"/>
+	</body>
+	<script src="../script.js"></script>
+</html>								
